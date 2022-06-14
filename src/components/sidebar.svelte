@@ -2,7 +2,7 @@
   import Logo from '../images/logo.svg';
 </script>
 
-<div class="px-24 text-lg items-center bg-blue-200">
+<div class="px-24 text-lg items-center">
   <div class="w-36 h-screen flex flex-col justify-between py-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" />
     <div class="flex flex-col space-y-2">
