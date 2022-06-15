@@ -13,6 +13,7 @@
   import Gallery from '../components/gallery.svelte';
   import GalleryItemLean from '../utils/gallery-item-lean';
   import LargeGallery from '../components/large-gallery.svelte';
+  import Image from '../utils/image';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
@@ -196,7 +197,17 @@
 
       <Title title="Final Gallery" />
       <LargeGallery
-        items={[[Gallery1], [Gallery2, Gallery3, Gallery4], [Gallery5], [Gallery6], [Gallery7]]}
+        items={[
+          [new Image(Gallery1, 12767, 7167)],
+          [
+            new Image(Gallery2, 4684, 3750),
+            new Image(Gallery3, 4684, 3750),
+            new Image(Gallery4, 3067, 3750)
+          ],
+          [new Image(Gallery5, 12767, 7167)],
+          [new Image(Gallery6, 12767, 7125)],
+          [new Image(Gallery7, 6300, 5250)]
+        ]}
       />
 
       <a class="px-6 py-3 button" href="/lyu">Next Project</a>
