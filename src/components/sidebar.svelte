@@ -9,7 +9,7 @@
 </script>
 
 <div
-  class="relative h-screen min-h-172 xl:min-h-192 shadow-lg flex-shrink-0"
+  class="relative h-screen min-h-172 xl:min-h-192 shadow-lg flex-shrink-0 bg-white"
   style={`width: ${$progress * (pageWidth < 1280 ? 16 : 21)}rem`}
 >
   <div class="absolute top-0 right-18 xl:right-24 w-36 h-full flex flex-col justify-between py-24">
@@ -29,18 +29,18 @@
       <a href="/resume" class="primary pb-8">Resume</a>
     </div>
     <div class="flex flex-row justify-between">
-      <a href="https://www.instagram.com/lyu.shirley/">
+      <a href="https://www.instagram.com/lyu.shirley/" target="_blank">
         <i class="fa-brands fa-instagram" />
       </a>
       <a href="mailto:shirley.lyu.xiaoya@gmail.com">
         <i class="fa-regular fa-envelope" />
       </a>
-      <a href="https://www.linkedin.com/in/xiaoya-lyu-11b68419b/">
+      <a href="https://www.linkedin.com/in/xiaoya-lyu-11b68419b/" target="_blank">
         <i class="fa-brands fa-linkedin-in" />
       </a>
     </div>
   </div>
-  <div class="absolute w-20 h-24 top-20 -right-20 overflow-hidden">
+  <div class="absolute w-20 h-24 top-20 -right-20 overflow-hidden z-10">
     <div
       class="absolute rounded-full bg-white w-20 h-20 top-0 -left-10 shadow-lg flex items-center cursor-pointer"
       on:click={() => {

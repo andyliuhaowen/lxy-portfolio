@@ -49,7 +49,6 @@
   import Gallery4 from '../images/overlap/gallery_4.png?webp&w=640';
   import Gallery5 from '../images/overlap/gallery_5.png?webp&w=1920';
   import Gallery6 from '../images/overlap/gallery_6.png?webp&w=1920';
-  import Gallery7 from '../images/overlap/gallery_7.png?webp&w=1920';
 
   var pageWidth;
 </script>
@@ -165,7 +164,10 @@
 
       <!-- Links -->
       <Spacing />
-      <a class="button px-6 py-3" href="/">Weekly Process</a>
+      <a
+        class="button px-6 py-3"
+        href="https://miro.com/app/board/uXjVOTEI2PY=/?share_link_id=859576850266">Weekly Process</a
+      >
       <div class="flex flex-row mt-spacing text-center space-x-spacing">
         <a class="button w-44 py-2" href="/overlap/brand_research.pdf" target="_blank"
           >Brand Research</a
@@ -195,7 +197,7 @@
         ]}
       />
 
-      <Title title="Final Gallery" />
+      <Title title="Gallery" />
       <LargeGallery
         items={[
           [new Image(Gallery1, 12767, 7167)],
@@ -205,8 +207,7 @@
             new Image(Gallery4, 3067, 3750)
           ],
           [new Image(Gallery5, 12767, 7167)],
-          [new Image(Gallery6, 12767, 7125)],
-          [new Image(Gallery7, 6300, 5250)]
+          [new Image(Gallery6, 12767, 7125)]
         ]}
       />
 

@@ -2,9 +2,11 @@
   import type Image from '../utils/image';
 
   export let items: Image[][];
+
+  var width: number;
 </script>
 
-<div class="space-y-spacing mb-spacing-lg">
+<div class="space-y-spacing mb-spacing-lg" bind:clientWidth={width}>
   {#each items as row}
     <div class="flex flex-row space-x-8">
       {#each row as image}
@@ -15,7 +17,7 @@
             src={image.src}
             alt="Gallery item"
             class="max-w-full"
-            style={`height: calc((100vw - ${(row.length - 1) * 2}rem - var(--sidebar))/${row
+            style={`height: calc((${width}px - ${(row.length - 1) * 2}rem)/${row
               .map((curr) => curr.width / curr.height)
               .reduce((prev, curr) => prev + curr)}`}
           />
