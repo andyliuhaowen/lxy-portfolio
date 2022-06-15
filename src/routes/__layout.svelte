@@ -12,19 +12,41 @@
 <style global lang="postcss">
   :root {
     --spacing: 1.5rem;
-    --spacing-lg: 1.5rem;
+    --spacing-lg: 2rem;
+    --sidebar: 16rem;
     @apply text-base;
   }
 
   @media (min-width: 1280px) {
     :root {
-      --spacing: 2rem;
-      --spacing-lg: 4rem;
+      --spacing: 4rem;
+      --spacing-lg: 6rem;
+      --sidebar: 21rem;
       @apply text-lg;
     }
   }
 
+  .title {
+    @apply font-semibold text-xl xl:text-2xl;
+  }
+
+  /* 1 | 1 */
   .half {
-    width: calc((100vw - 21rem - 2 * var(--spacing-lg) - var(--spacing)) / 2);
+    width: calc((100vw - var(--sidebar) - 2 * var(--spacing-lg) - var(--spacing)) / 2);
+  }
+
+  /* 2 | 1 */
+  .two-thirds {
+    width: calc((100vw - var(--sidebar) - 2 * var(--spacing-lg) - var(--spacing)) * 2 / 3);
+  }
+
+  /* 1 | 2 */
+  .one-third {
+    width: calc((100vw - 21rem - 2 * var(--spacing-lg) - var(--spacing)) / 3);
+  }
+
+  /* 1 | 1 | 1 */
+  .one-in-three-sparse {
+    width: calc((100vw - 21rem - 2 * var(--spacing-lg) - 2 * var(--spacing-lg)) / 3);
   }
 </style>

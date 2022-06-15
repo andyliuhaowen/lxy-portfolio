@@ -3,8 +3,23 @@
   import Scroller from '../components/scroller.svelte';
   import TopDisplay from '../components/top-display.svelte';
   import ProjectDescription from '../utils/project-description';
+  import TextImage from '../components/text-image.svelte';
+  import ImageText from '../components/image-text.svelte';
+  import GalleryItem from '../utils/gallery-item';
+  import HorizontalGallery from '../components/horizontal-gallery.svelte';
 
-  import Top from '../images/overlap/top.jpg?webp';
+  import TopImage from '../images/overlap/top.jpg?webp';
+  import ManifestoImage from '../images/overlap/manifesto.jpg?webp';
+  import Set1 from '../images/overlap/set_1.png?webp';
+  import Set2 from '../images/overlap/set_2.png?webp';
+  import Set3 from '../images/overlap/set_3.png?webp';
+  import TimerImage from '../images/overlap/timer.png?webp';
+  import TimerUseImage from '../images/overlap/timer_use.png?webp';
+  import FileSorterImage from '../images/overlap/file_sorter.png?webp';
+  import FileSorterUseImage1 from '../images/overlap/file_sorter_use_1.png?webp';
+  import TrayImage from '../images/overlap/tray.png?webp';
+  import TrayUseImage1 from '../images/overlap/tray_use_1.png?webp';
+  import TrayUseImage2 from '../images/overlap/tray_use_2.png?webp';
 
   var pageWidth;
 </script>
@@ -14,10 +29,10 @@
 </svelte:head>
 
 <div class="flex flex-row" bind:clientWidth={pageWidth}>
-  <Sidebar pageWidth={pageWidth} />
+  <Sidebar {pageWidth} />
   <Scroller>
     <TopDisplay
-      image={Top}
+      image={TopImage}
       description={new ProjectDescription(
         'Overlap',
         '14 Weeks',
@@ -27,5 +42,49 @@
         'This is not a product of Hay. Branding and logo marks are used for demonstration purposes only.'
       )}
     />
+    <TextImage
+      title="Project Manifesto"
+      content={[
+        'A collection of office accessories that can provide users with an intuitive concept of category. To help users better organize their time, space, and objects.'
+      ]}
+      image={ManifestoImage}
+    />
+    <div class="title mx-spacing-lg mt-spacing-lg mb-8">Overlap Set</div>
+    <HorizontalGallery
+      items={[
+        new GalleryItem('Timer', 'Section Time', Set1),
+        new GalleryItem('File Sorter', 'Categorize files, books, etc.', Set2),
+        new GalleryItem('Tray', 'Store pens, pins, etc.', Set3)
+      ]}
+    />
+    <div class="pt-spacing-lg" />
+    <!-- Timer -->
+    <TextImage
+      title="Timer"
+      content={['Overlapped part = Set up time', '1 Slice = 10 mins', 'Total: 1 hour']}
+      image={TimerImage}
+    />
+    <ImageText
+      title="Timer usage"
+      content={['Set a Time', 'Set-time Passing']}
+      image={TimerUseImage}
+    />
+    <!-- File Sorter -->
+    <TextImage
+      title="File Sorter"
+      content={[
+        '4 Different translucent colored blockers categorize files with height and colors.'
+      ]}
+      image={FileSorterImage}
+    />
+    <ImageText title="File sorter usage 1" content={['Put in file']} image={FileSorterUseImage1} />
+    <!-- Tray -->
+    <TextImage
+      title="Tray"
+      content={['4 Different color, size, and depth trays to categorize office accessories.']}
+      image={TrayImage}
+    />
+    <ImageText title="Tray usage 1" content={['Different combinations']} image={TrayUseImage1} />
+    <ImageText title="Tray usage 2" content={['Different usage']} image={TrayUseImage2} />
   </Scroller>
 </div>

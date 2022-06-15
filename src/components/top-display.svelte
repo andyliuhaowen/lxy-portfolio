@@ -5,8 +5,13 @@
 </script>
 
 <div class="h-screen min-h-172 xl:min-h-192 flex flex-col">
-  <img src={image} alt={description.name} class="object-cover flex-shrink flex-grow min-h-0" />
-  <div class="flex flex-row px-spacing-lg py-spacing space-x-spacing justify-around">
+  <img
+    src={image}
+    alt={description.name}
+    class="object-cover flex-shrink flex-grow min-h-0"
+    loading="lazy"
+  />
+  <div class="flex flex-row px-spacing-lg py-8 space-x-spacing justify-around">
     <div class="half space-y-2">
       <div class="section">
         <span class="heading">Duration:</span>
@@ -34,9 +39,11 @@
     </div>
   </div>
 </div>
+<div class="pt-spacing-lg" />
 
 <style lang="postcss">
   .section {
+    @apply font-extralight;
     & span {
       @apply font-semibold;
     }
