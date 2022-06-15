@@ -8,3 +8,13 @@ declare namespace App {
   // interface Session {}
   // interface Stuff {}
 }
+
+declare module '*.jpg?webp' {
+  const src: string;
+  export default src;
+}
+
+declare module '*.png?webp' {
+  const src: string;
+  export default src;
+}

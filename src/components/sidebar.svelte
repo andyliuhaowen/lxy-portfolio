@@ -2,12 +2,17 @@
   import Logo from '../images/logo.svg';
   import { spring } from 'svelte/motion';
 
-  var progress = spring(1, {stiffness: 0.1, damping: 0.8});
+  export let pageWidth: number;
+
+  var progress = spring(1, { stiffness: 0.1, damping: 0.6, precision: 0.005 });
   var open = true;
 </script>
 
-<div class="relative w-84 h-screen text-lg shadow-lg" style={`width: ${$progress * 21}rem`}>
-  <div class="absolute top-0 right-24 w-36 h-screen flex flex-col justify-between py-24">
+<div
+  class="relative h-screen min-h-172 xl:min-h-192 shadow-lg flex-shrink-0"
+  style={`width: ${$progress * (pageWidth < 1280 ? 18 : 21)}rem`}
+>
+  <div class="absolute top-0 right-18 xl:right-24 w-36 h-full flex flex-col justify-between py-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" />
     <div class="flex flex-col space-y-2">
       <a href="/about" class="primary">About</a>
@@ -47,7 +52,10 @@
         open = !open;
       }}
     >
-      <i class="relative fa-solid fa-angle-left fa-xl left-12" style={`transform: rotateY(${(1 - $progress) * 180}deg)`} />
+      <i
+        class="relative fa-solid fa-angle-left fa-xl left-12"
+        style={`transform: rotateY(${(1 - $progress) * 180}deg)`}
+      />
     </div>
   </div>
 </div>
