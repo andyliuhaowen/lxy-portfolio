@@ -11,31 +11,33 @@
     class="object-cover flex-shrink flex-grow min-h-0"
     loading="lazy"
   />
-  <div class="flex flex-row px-spacing-lg py-8 space-x-spacing justify-around">
-    <div class="half space-y-2">
-      <div class="section">
-        <span class="heading">Duration:</span>
-        {description.duration}
-      </div>
-      <div class="section">
-        <span class="heading">Category:</span>
-        {description.category}
-      </div>
-      <div class="section">
-        <span class="heading">Project Focus:</span>
-        {description.focus}
-      </div>
-    </div>
-    <div class="half space-y-2">
-      <div class="section">
-        <span class="heading">Project Brief:</span>
-        {description.brief}
-      </div>
-      {#if description.comment !== undefined}
-        <div class="text-xs">
-          * {description.comment}
+  <div class="flex flex-col items-center">
+    <div class="flex flex-row mx-spacing-lg py-8 space-x-spacing single-width">
+      <div class="half space-y-2">
+        <div class="section">
+          <span class="heading">Duration:</span>
+          {description.duration}
         </div>
-      {/if}
+        <div class="section">
+          <span class="heading">Category:</span>
+          {description.category}
+        </div>
+        <div class="section">
+          <span class="heading">Project Focus:</span>
+          {description.focus}
+        </div>
+      </div>
+      <div class="half space-y-2">
+        <div class="section">
+          <span class="heading">Project Brief:</span>
+          {description.brief}
+        </div>
+        {#if description.comment !== undefined}
+          <div class="text-xs">
+            * {description.comment}
+          </div>
+        {/if}
+      </div>
     </div>
   </div>
 </div>

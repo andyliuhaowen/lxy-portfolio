@@ -30,6 +30,10 @@
     @apply font-semibold text-xl xl:text-2xl;
   }
 
+  .single-width {
+    width: calc(100vw - var(--sidebar) - 2 * var(--spacing-lg));
+  }
+
   /* 1 | 1 */
   .half {
     width: calc((100vw - var(--sidebar) - 2 * var(--spacing-lg) - var(--spacing)) / 2);
