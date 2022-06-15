@@ -30,6 +30,10 @@
     @apply font-semibold text-xl xl:text-2xl;
   }
 
+  .button {
+    @apply rounded-full shadow bg-gray-200;
+  }
+
   .single-width {
     width: calc(100vw - var(--sidebar) - 2 * var(--spacing-lg));
   }

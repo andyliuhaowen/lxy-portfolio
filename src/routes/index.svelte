@@ -12,7 +12,7 @@
   import Spacing from '../components/spacing.svelte';
   import Gallery from '../components/gallery.svelte';
   import GalleryItemLean from '../utils/gallery-item-lean';
-  import Button from '../components/button.svelte';
+  import LargeGallery from '../components/large-gallery.svelte';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
@@ -26,6 +26,7 @@
   import TimerUseImage from '../images/overlap/timer_use.png?webp&w=1280';
   import FileSorterImage from '../images/overlap/file_sorter.png?webp&w=960';
   import FileSorterUseImage1 from '../images/overlap/file_sorter_use_1.png?webp&w=1280';
+  import FileSorterUseImage2 from '../images/overlap/file_sorter_use_2.png?webp&w=1280';
   import TrayImage from '../images/overlap/tray.png?webp&w=960';
   import TrayUseImage1 from '../images/overlap/tray_use_1.png?webp&w=1280';
   import TrayUseImage2 from '../images/overlap/tray_use_2.png?webp&w=1280';
@@ -41,6 +42,13 @@
   import AcrylicGluing from '../images/overlap/acrylic_gluing.png?webp&w=640';
   import ClearMatteFinishSpray from '../images/overlap/clear_matte_finish_spray.png?webp&w=640';
   import Assembly from '../images/overlap/assembly.png?webp&w=640';
+  import Gallery1 from '../images/overlap/gallery_1.png?webp&w=1920';
+  import Gallery2 from '../images/overlap/gallery_2.png?webp&w=640';
+  import Gallery3 from '../images/overlap/gallery_3.png?webp&w=640';
+  import Gallery4 from '../images/overlap/gallery_4.png?webp&w=640';
+  import Gallery5 from '../images/overlap/gallery_5.png?webp&w=1920';
+  import Gallery6 from '../images/overlap/gallery_6.png?webp&w=1920';
+  import Gallery7 from '../images/overlap/gallery_7.png?webp&w=1920';
 
   var pageWidth;
 </script>
@@ -121,6 +129,11 @@
         content={['Put in file']}
         image={FileSorterUseImage1}
       />
+      <ImageText
+        title="File sorter usage 2"
+        content={['Different Overlapping Order']}
+        image={FileSorterUseImage2}
+      />
 
       <!-- Tray -->
       <TextImage
@@ -148,6 +161,21 @@
           />
         </div>
       </div>
+
+      <!-- Links -->
+      <Spacing />
+      <a class="button px-6 py-3" href="/">Weekly Process</a>
+      <div class="flex flex-row mt-spacing text-center space-x-spacing">
+        <a class="button w-44 py-2" href="/overlap/brand_research.pdf" target="_blank"
+          >Brand Research</a
+        >
+        <a class="button w-44 py-2" href="/overlap/ideation.pdf" target="_blank">Ideation</a>
+        <a class="button w-44 py-2" href="/">Prototype</a>
+        <a class="button w-44 py-2" href="/">CMF & Manufacture</a>
+      </div>
+      <Spacing />
+
+      <!-- Making process -->
       <Title title="Final Model Making Process" />
       <Gallery
         items={[
@@ -166,7 +194,13 @@
         ]}
       />
 
-      <Button label="Next Project" href="lyu" />
+      <Title title="Final Gallery" />
+      <LargeGallery
+        items={[[Gallery1], [Gallery2, Gallery3, Gallery4], [Gallery5], [Gallery6], [Gallery7]]}
+      />
+
+      <a class="px-6 py-3 button" href="/lyu">Next Project</a>
+      <Spacing />
     </div>
   </Scroller>
 </div>
