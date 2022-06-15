@@ -9,12 +9,12 @@
 </script>
 
 <div
-  class="relative h-screen min-h-172 xl:min-h-192 shadow-lg flex-shrink-0 bg-white"
+  class="relative h-screen min-h-132 xl:min-h-152 shadow-lg flex-shrink-0 bg-white"
   style={`width: ${$progress * (pageWidth < 1280 ? 16 : 21)}rem`}
 >
   <div class="absolute top-0 right-18 xl:right-24 w-36 h-full flex flex-col justify-between py-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
-    <div class="flex flex-col space-y-2">
+    <div class="flex flex-col space-y-1">
       <a href="/about" class="primary">About</a>
       <a href="/portfolio" class="primary">Portfolio</a>
 

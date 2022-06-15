@@ -12,8 +12,8 @@ module.exports = {
         'spacing-lg': 'var(--spacing-lg)'
       },
       minHeight: {
-        172: '43rem',
-        192: '48rem'
+        132: '33rem',
+        152: '38rem'
       },
       inset: {
         18: '4.5rem'

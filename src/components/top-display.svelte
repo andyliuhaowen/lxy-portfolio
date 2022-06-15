@@ -4,7 +4,7 @@
   export let image: string, description: ProjectDescription;
 </script>
 
-<div class="h-screen min-h-172 xl:min-h-192 flex flex-col">
+<div class="h-screen min-h-132 xl:min-h-152 flex flex-col">
   <img
     src={image}
     alt={description.name}
