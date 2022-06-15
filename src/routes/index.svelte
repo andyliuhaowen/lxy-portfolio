@@ -8,18 +8,18 @@
   import GalleryItem from '../utils/gallery-item';
   import HorizontalGallery from '../components/horizontal-gallery.svelte';
 
-  import TopImage from '../images/overlap/top.jpg?webp';
-  import ManifestoImage from '../images/overlap/manifesto.jpg?webp';
-  import Set1 from '../images/overlap/set_1.png?webp';
-  import Set2 from '../images/overlap/set_2.png?webp';
-  import Set3 from '../images/overlap/set_3.png?webp';
-  import TimerImage from '../images/overlap/timer.png?webp';
-  import TimerUseImage from '../images/overlap/timer_use.png?webp';
-  import FileSorterImage from '../images/overlap/file_sorter.png?webp';
-  import FileSorterUseImage1 from '../images/overlap/file_sorter_use_1.png?webp';
-  import TrayImage from '../images/overlap/tray.png?webp';
-  import TrayUseImage1 from '../images/overlap/tray_use_1.png?webp';
-  import TrayUseImage2 from '../images/overlap/tray_use_2.png?webp';
+  import TopImage from '../images/overlap/top.jpg?webp&w=1920';
+  import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
+  import Set1 from '../images/overlap/set_1.png?webp&w=640';
+  import Set2 from '../images/overlap/set_2.png?webp&w=640';
+  import Set3 from '../images/overlap/set_3.png?webp&w=640';
+  import TimerImage from '../images/overlap/timer.png?webp&w=960';
+  import TimerUseImage from '../images/overlap/timer_use.png?webp&w=1280';
+  import FileSorterImage from '../images/overlap/file_sorter.png?webp&w=960';
+  import FileSorterUseImage1 from '../images/overlap/file_sorter_use_1.png?webp&w=1280';
+  import TrayImage from '../images/overlap/tray.png?webp&w=960';
+  import TrayUseImage1 from '../images/overlap/tray_use_1.png?webp&w=1280';
+  import TrayUseImage2 from '../images/overlap/tray_use_2.png?webp&w=1280';
 
   var pageWidth;
 </script>
