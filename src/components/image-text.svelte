@@ -2,7 +2,7 @@
   export let title: string, content: string[], image: string;
 </script>
 
-<div class="flex flex-row m-spacing-lg space-x-spacing single-width">
+<div class="flex flex-row mx-spacing-lg mb-spacing-3lg space-x-spacing single-width">
   <img src={image} alt={title} class="two-thirds" loading="lazy" />
   <div class="one-third flex flex-col justify-end">
     <div class="font-extralight text-right">

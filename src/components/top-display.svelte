@@ -4,7 +4,7 @@
   export let image: string, description: ProjectDescription;
 </script>
 
-<div class="h-screen min-h-132 xl:min-h-152 flex flex-col">
+<div class="h-screen min-h-132 xl:min-h-152 flex flex-col mb-spacing-3lg">
   <img
     src={image}
     alt={description.name}
@@ -41,7 +41,6 @@
     </div>
   </div>
 </div>
-<div class="pt-spacing-lg" />
 
 <style lang="postcss">
   .section {

@@ -4,7 +4,7 @@
   export let items: GalleryItem[];
 </script>
 
-<div class="flex flex-row mx-spacing-lg justify-around single-width">
+<div class="flex flex-row mx-spacing-lg justify-around single-width mb-spacing-3lg">
   {#each items as item}
     <div class="flex flex-col items-center one-in-three-sparse">
       <img src={item.image} alt={item.title} loading="lazy" />

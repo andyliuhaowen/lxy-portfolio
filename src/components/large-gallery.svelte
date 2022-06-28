@@ -6,7 +6,7 @@
   var width: number;
 </script>
 
-<div class="space-y-spacing mb-spacing-lg" bind:clientWidth={width}>
+<div class="space-y-spacing mb-spacing-3lg" bind:clientWidth={width}>
   {#each items as row}
     <div class="flex flex-row space-x-8">
       {#each row as image}

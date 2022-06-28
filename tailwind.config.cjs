@@ -5,7 +5,9 @@ module.exports = {
     extend: {
       spacing: {
         spacing: 'var(--spacing)',
-        'spacing-lg': 'var(--spacing-lg)'
+        'spacing-lg': 'var(--spacing-lg)',
+        'spacing-2lg': 'calc(2 *var(--spacing-lg))',
+        'spacing-3lg': 'calc(3 *var(--spacing-lg))'
       },
       space: {
         spacing: 'var(--spacing)',

@@ -2,7 +2,7 @@
   export let title: string, content: string[], image: string;
 </script>
 
-<div class="flex flex-row m-spacing-lg space-x-spacing single-width">
+<div class="flex flex-row mx-spacing-lg mb-spacing-3lg space-x-spacing single-width">
   <div class="half flex flex-col justify-end">
     <div class="mb-24 title">{title}</div>
     <div class="font-extralight">

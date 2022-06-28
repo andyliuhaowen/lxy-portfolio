@@ -10,7 +10,7 @@
   import OverlayImage from '../components/overlay-image.svelte';
   import Title from '../components/title.svelte';
   import Spacing from '../components/spacing.svelte';
-  import Gallery from '../components/gallery.svelte';
+  import SmallGallery from '../components/small-gallery.svelte';
   import GalleryItemLean from '../utils/gallery-item-lean';
   import LargeGallery from '../components/large-gallery.svelte';
   import Image from '../utils/image';
@@ -89,7 +89,7 @@
         ]}
       />
       <Spacing />
-      <Title title="Time, Space, Organizing" />
+      <Title title="Moodboard: Time, Space, Organizing" />
       <OverlayImage
         title="Overlapped"
         content="Time and space sometimes overlap."
@@ -180,7 +180,7 @@
 
       <!-- Making process -->
       <Title title="Final Model Making Process" />
-      <Gallery
+      <SmallGallery
         items={[
           new GalleryItemLean('Wood Cut', WoodCut),
           new GalleryItemLean('Wood Flatten', WoodFlatten),
