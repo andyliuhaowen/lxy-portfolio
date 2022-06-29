@@ -11,10 +11,10 @@
   import Title from '../components/title.svelte';
   import Spacing from '../components/spacing.svelte';
   import SmallGallery from '../components/small-gallery.svelte';
-  import GalleryItemLean from '../utils/gallery-item-lean';
   import LargeGallery from '../components/large-gallery.svelte';
   import Image from '../utils/image';
   import Carousel from '../components/carousel.svelte';
+  import Subtitle from '../components/subtitle.svelte';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
@@ -69,6 +69,11 @@
   import CMF6 from '../images/overlap/CMF/CMF-06.png?webp&w=1920';
   import CMF7 from '../images/overlap/CMF/CMF-07.png?webp&w=1920';
   import CMF8 from '../images/overlap/CMF/CMF-08.png?webp&w=1920';
+  import Playful from '../images/overlap/brand-dna/playful.png?webp&w=640';
+  import Accessible from '../images/overlap/brand-dna/accessible.png?webp&w=640';
+  import Adaptive from '../images/overlap/brand-dna/adaptive.png?webp&w=640';
+  import Contemporary from '../images/overlap/brand-dna/comtemporary.png?webp&w=640';
+  import Vibrant from '../images/overlap/brand-dna/vibrant.png?webp&w=640';
 
   var pageWidth;
 </script>
@@ -103,10 +108,11 @@
       <Title title="Overlap Set" />
       <HorizontalGallery
         items={[
-          new GalleryItem('Timer', 'Section Time', Set1),
-          new GalleryItem('File Sorter', 'Categorize files, books, etc.', Set2),
-          new GalleryItem('Tray', 'Store pens, pins, etc.', Set3)
+          new GalleryItem(Set1, 'Timer', 'Section Time'),
+          new GalleryItem(Set2, 'File Sorter', 'Categorize files, books, etc.'),
+          new GalleryItem(Set3, 'Tray', 'Store pens, pins, etc.')
         ]}
+        sparse={true}
       />
       <Title title="Moodboard: Time, Space, Organizing" />
       <OverlayImage
@@ -180,6 +186,20 @@
         description="Tech Drawing"
       />
 
+      <!-- Design Process -->
+      <Title title="Design Process" />
+      <Subtitle subtitle="HAY's Brand DNA Analysis" />
+      <HorizontalGallery
+        items={[
+          new GalleryItem(Playful, undefined, 'Playful'),
+          new GalleryItem(Accessible, undefined, 'Accessible'),
+          new GalleryItem(Adaptive, undefined, 'Adaptive'),
+          new GalleryItem(Contemporary, undefined, 'Contemporary'),
+          new GalleryItem(Vibrant, undefined, 'Vibrant')
+        ]}
+        sparse={false}
+      />
+
       <!-- CMF & Manufacturing -->
       <Title title="CMF & Manufacturing" />
       <Carousel images={[CMF1, CMF2, CMF3, CMF4, CMF5, CMF6, CMF7, CMF8]} description="CMF" />
@@ -188,22 +208,22 @@
       <Title title="Final Model Making Process" />
       <SmallGallery
         items={[
-          new GalleryItemLean('Wood Cut', WoodCut),
-          new GalleryItemLean('Wood Flatten', WoodFlatten),
-          new GalleryItemLean('CNC', CNC),
-          new GalleryItemLean('Laser Cut', LaserCut),
-          new GalleryItemLean('Band Saw Cut', BandSawCut),
-          new GalleryItemLean('Machine Sanding', MachineSanding),
-          new GalleryItemLean('Hand Sanding', HandSanding),
-          new GalleryItemLean('Router Chamfer', RouterChamfer),
-          new GalleryItemLean('Wood Stain', WoodStain),
-          new GalleryItemLean('Acrylic Gluing', AcrylicGluing),
-          new GalleryItemLean('Clear Matte Finish Spray', ClearMatteFinishSpray),
-          new GalleryItemLean('Assembly', Assembly)
+          new GalleryItem(WoodCut, 'Wood Cut'),
+          new GalleryItem(WoodFlatten, 'Wood Flatten'),
+          new GalleryItem(CNC, 'CNC'),
+          new GalleryItem(LaserCut, 'Laser Cut'),
+          new GalleryItem(BandSawCut, 'Band Saw Cut'),
+          new GalleryItem(MachineSanding, 'Machine Sanding'),
+          new GalleryItem(HandSanding, 'Hand Sanding'),
+          new GalleryItem(RouterChamfer, 'Router Chamfer'),
+          new GalleryItem(WoodStain, 'Wood Stain'),
+          new GalleryItem(AcrylicGluing, 'Acrylic Gluing'),
+          new GalleryItem(ClearMatteFinishSpray, 'Clear Matte Finish Spray'),
+          new GalleryItem(Assembly, 'Assembly')
         ]}
       />
 
-      <Title title="Gallery" />
+      <Title title="Product Gallery" />
       <LargeGallery
         items={[
           [new Image(Gallery1, 12767, 7167)],

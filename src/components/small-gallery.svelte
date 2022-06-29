@@ -1,14 +1,14 @@
 <script lang="ts">
-  import type GalleryItemLean from '../utils/gallery-item-lean';
+  import type GalleryItem from '../utils/gallery-item';
 
-  export let items: GalleryItemLean[];
+  export let items: GalleryItem[];
 </script>
 
 <div class="single paragraph mx-spacing-lg mb-spacing-3lg grid grid-cols-3 gap-y-spacing gap-x-8">
   {#each items as item}
     <div class="flex flex-col items-center">
-      <img src={item.image} alt={item.description} />
-      <div class="mt-2">{item.description}</div>
+      <img src={item.image} alt={item.title} />
+      <div class="mt-2">{item.title}</div>
     </div>
   {/each}
 </div>

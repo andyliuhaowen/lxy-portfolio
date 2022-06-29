@@ -59,14 +59,4 @@
   .one-third {
     width: calc((100vw - 21rem - 2 * var(--spacing-lg) - var(--spacing)) / 3);
   }
-
-  /* 1 || 1 || 1 */
-  .one-in-three-sparse {
-    width: calc((100vw - 21rem - 2 * var(--spacing-lg) - 2 * var(--spacing-lg)) / 3);
-  }
-
-  /* 1 | 1 | 1 | 1 | 1 */
-  .one-in-five {
-    width: calc((100vw - 21rem - 2 * var(--spacing-lg) - 4 * var(--spacing)) / 3);
-  }
 </style>
