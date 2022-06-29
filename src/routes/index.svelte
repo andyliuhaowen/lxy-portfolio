@@ -61,6 +61,14 @@
   import TechDrawing9 from '../images/overlap/tech-drawing/tech-drawing-09.png?webp&w=1920';
   import TechDrawing10 from '../images/overlap/tech-drawing/tech-drawing-10.png?webp&w=1920';
   import TechDrawing11 from '../images/overlap/tech-drawing/tech-drawing-11.png?webp&w=1920';
+  import CMF1 from '../images/overlap/CMF/CMF-01.png?webp&w=1920';
+  import CMF2 from '../images/overlap/CMF/CMF-02.png?webp&w=1920';
+  import CMF3 from '../images/overlap/CMF/CMF-03.png?webp&w=1920';
+  import CMF4 from '../images/overlap/CMF/CMF-04.png?webp&w=1920';
+  import CMF5 from '../images/overlap/CMF/CMF-05.png?webp&w=1920';
+  import CMF6 from '../images/overlap/CMF/CMF-06.png?webp&w=1920';
+  import CMF7 from '../images/overlap/CMF/CMF-07.png?webp&w=1920';
+  import CMF8 from '../images/overlap/CMF/CMF-08.png?webp&w=1920';
 
   var pageWidth;
 </script>
@@ -100,20 +108,17 @@
           new GalleryItem('Tray', 'Store pens, pins, etc.', Set3)
         ]}
       />
-      <Spacing />
       <Title title="Moodboard: Time, Space, Organizing" />
       <OverlayImage
         title="Overlapped"
         content="Time and space sometimes overlap."
         image={Overlay1}
       />
-      <Spacing />
       <OverlayImage
         title="Changeable"
         content="Time changes are unnoticeable, so objects’ movements and Changes are used to define time pass and environment change."
         image={Overlay2}
       />
-      <Spacing />
       <OverlayImage title="Joyful" content="Categorizing can be a joyful thing!" image={Overlay3} />
 
       <!-- Timer -->
@@ -175,21 +180,9 @@
         description="Tech Drawing"
       />
 
-      <!-- Links -->
-      <Spacing />
-      <a
-        class="button px-6 py-3"
-        href="https://miro.com/app/board/uXjVOTEI2PY=/?share_link_id=859576850266">Weekly Process</a
-      >
-      <div class="mt-spacing flex flex-row space-x-spacing text-center">
-        <a class="button w-44 py-2" href="/overlap/brand_research.pdf" target="_blank"
-          >Brand Research</a
-        >
-        <a class="button w-44 py-2" href="/overlap/ideation.pdf" target="_blank">Ideation</a>
-        <a class="button w-44 py-2" href="/">Prototype</a>
-        <a class="button w-44 py-2" href="/">CMF & Manufacture</a>
-      </div>
-      <Spacing />
+      <!-- CMF & Manufacturing -->
+      <Title title="CMF & Manufacturing" />
+      <Carousel images={[CMF1, CMF2, CMF3, CMF4, CMF5, CMF6, CMF7, CMF8]} description="CMF" />
 
       <!-- Making process -->
       <Title title="Final Model Making Process" />

@@ -4,7 +4,7 @@
   let currentIndex = 0;
 </script>
 
-<div class="single flex flex-row w-full items-center space-x-4 text-gray-800">
+<div class="single flex flex-row w-full items-center space-x-4 text-gray-900">
   <i
     class="fa-solid fa-angle-left fa-3x angle"
     class:cursor-pointer={currentIndex !== 0}
@@ -32,11 +32,11 @@
     }}
   />
 </div>
-<div class="single relative h-3 mt-4">
+<div class="single relative h-3 mt-4 mb-spacing-3lg">
   <div class="absolute left-1/2 top-0 bottom-0 -translate-x-1/2 flex flex-row space-x-3">
     {#each images as _, index}
       <div
-        class="w-3 h-3 relative cursor-pointer text-gray-800"
+        class="w-3 h-3 relative cursor-pointer text-gray-900"
         on:click={() => {
           currentIndex = index;
         }}
