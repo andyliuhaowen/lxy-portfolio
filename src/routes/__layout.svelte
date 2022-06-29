@@ -14,7 +14,6 @@
     --spacing: 1.5rem;
     --spacing-lg: 2rem;
     --sidebar: 16rem;
-    @apply text-base;
   }
 
   @media (min-width: 1280px) {
@@ -28,6 +27,14 @@
 
   .title {
     @apply text-xl font-semibold xl:text-2xl;
+  }
+
+  .subtitle {
+    @apply text-base font-semibold xl:text-lg;
+  }
+
+  .paragraph {
+    @apply text-sm font-extralight xl:text-base;
   }
 
   .button {

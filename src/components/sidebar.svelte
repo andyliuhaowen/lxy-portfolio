@@ -15,18 +15,18 @@
   <div class="absolute top-0 right-18 flex h-full w-36 flex-col justify-between py-24 xl:right-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
     <div class="flex flex-col space-y-1">
-      <a href="/about" class="primary">About</a>
-      <a href="/portfolio" class="primary">Portfolio</a>
+      <a href="/about" class="subtitle">About</a>
+      <a href="/portfolio" class="subtitle">Portfolio</a>
 
-      <a href="/overlap" class="secondary">Overlap</a>
-      <a href="/lyu" class="secondary">Lyu</a>
-      <a href="/soul" class="secondary">Soul</a>
-      <a href="/sunrise" class="secondary">Sunrise Speaker</a>
-      <a href="/mode" class="secondary">Mode Bag</a>
-      <a href="/More" class="secondary">More</a>
+      <a href="/overlap" class="paragraph">Overlap</a>
+      <a href="/lyu" class="paragraph">Lyu</a>
+      <a href="/soul" class="paragraph">Soul</a>
+      <a href="/sunrise" class="paragraph">Sunrise Speaker</a>
+      <a href="/mode" class="paragraph">Mode Bag</a>
+      <a href="/More" class="paragraph">More</a>
 
-      <a href="/mini" class="primary">Mini Works</a>
-      <a href="/resume" class="primary pb-8">Resume</a>
+      <a href="/mini" class="subtitle">Mini Works</a>
+      <a href="/resume" class="subtitle pb-8">Resume</a>
     </div>
     <div class="flex flex-row justify-between">
       <a href="https://www.instagram.com/lyu.shirley/" target="_blank">
@@ -59,13 +59,3 @@
     </div>
   </div>
 </div>
-
-<style lang="postcss">
-  .primary {
-    @apply font-semibold;
-  }
-
-  .secondary {
-    @apply font-extralight;
-  }
-</style>

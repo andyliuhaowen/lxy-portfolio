@@ -5,7 +5,7 @@
 <div class="single mx-spacing-lg mb-spacing-3lg flex flex-row space-x-spacing">
   <div class="half flex flex-col justify-end">
     <div class="title mb-24">{title}</div>
-    <div class="font-extralight">
+    <div class="paragraph">
       {#each content as line}
         <div>{line}</div>
       {/each}

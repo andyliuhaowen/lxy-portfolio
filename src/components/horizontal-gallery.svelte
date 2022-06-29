@@ -8,8 +8,8 @@
   {#each items as item}
     <div class="one-in-three-sparse flex flex-col items-center">
       <img src={item.image} alt={item.title} loading="lazy" />
-      <div class="mt-4 text-center text-base font-semibold xl:mt-8 xl:text-lg">{item.title}</div>
-      <div class="text-center text-sm font-extralight xl:text-base">{item.description}</div>
+      <div class="subtitle mt-4 text-center xl:mt-8">{item.title}</div>
+      <div class="paragraph text-center">{item.description}</div>
     </div>
   {/each}
 </div>
