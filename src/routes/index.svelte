@@ -74,6 +74,9 @@
   import Adaptive from '../images/overlap/brand-dna/adaptive.png?webp&w=640';
   import Contemporary from '../images/overlap/brand-dna/comtemporary.png?webp&w=640';
   import Vibrant from '../images/overlap/brand-dna/vibrant.png?webp&w=640';
+  import Benchmark from '../images/overlap/benchmark.png?webp&w=1920';
+  import Ideation from '../images/overlap/ideation.png?webp&w=1920';
+  import Prototype from '../images/overlap/prototype.png?webp&w=1920';
 
   var pageWidth;
 </script>
@@ -199,6 +202,15 @@
         ]}
         sparse={false}
       />
+
+      <Subtitle subtitle="HAY's Brand Benchmarks" />
+      <img src={Benchmark} alt="Brand benchmark" class="single mb-spacing-3lg" />
+
+      <Subtitle subtitle="Overlap Ideation" />
+      <img src={Ideation} alt="Ideation" class="w-full mb-spacing-3lg" />
+
+      <Subtitle subtitle="Prototype & Form Perfection" />
+      <img src={Prototype} alt="Prototype" class="w-full mb-spacing-3lg" />
 
       <!-- CMF & Manufacturing -->
       <Title title="CMF & Manufacturing" />
