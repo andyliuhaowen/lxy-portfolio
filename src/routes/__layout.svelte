@@ -5,7 +5,7 @@
 <div class="hidden md:block">
   <slot />
 </div>
-<div class="block md:hidden m-12 font-semibold">
+<div class="m-12 block font-semibold md:hidden">
   Your screen is too small. Use a larger device or enlarge your browser window.
 </div>
 
@@ -27,14 +27,14 @@
   }
 
   .title {
-    @apply font-semibold text-xl xl:text-2xl;
+    @apply text-xl font-semibold xl:text-2xl;
   }
 
   .button {
-    @apply rounded-full shadow bg-gray-200;
+    @apply rounded-full bg-gray-200 shadow;
   }
 
-  .single-width {
+  .single {
     width: calc(100vw - var(--sidebar) - 2 * var(--spacing-lg));
   }
 

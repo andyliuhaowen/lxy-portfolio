@@ -4,15 +4,15 @@
   export let image: string, description: ProjectDescription;
 </script>
 
-<div class="h-screen min-h-132 xl:min-h-152 flex flex-col mb-spacing-3lg">
+<div class="mb-spacing-3lg flex h-screen min-h-132 flex-col xl:min-h-152">
   <img
     src={image}
     alt={description.name}
-    class="object-cover flex-shrink flex-grow min-h-0"
+    class="min-h-0 flex-shrink flex-grow object-cover"
     loading="lazy"
   />
   <div class="flex flex-col items-center">
-    <div class="flex flex-row mx-spacing-lg py-8 space-x-spacing single-width">
+    <div class="single mx-spacing-lg flex flex-row space-x-spacing py-8">
       <div class="half space-y-2">
         <div class="section">
           <span class="heading">Duration:</span>

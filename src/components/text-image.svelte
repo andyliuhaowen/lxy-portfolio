@@ -2,9 +2,9 @@
   export let title: string, content: string[], image: string;
 </script>
 
-<div class="flex flex-row mx-spacing-lg mb-spacing-3lg space-x-spacing single-width">
+<div class="single mx-spacing-lg mb-spacing-3lg flex flex-row space-x-spacing">
   <div class="half flex flex-col justify-end">
-    <div class="mb-24 title">{title}</div>
+    <div class="title mb-24">{title}</div>
     <div class="font-extralight">
       {#each content as line}
         <div>{line}</div>

@@ -14,41 +14,53 @@
   import GalleryItemLean from '../utils/gallery-item-lean';
   import LargeGallery from '../components/large-gallery.svelte';
   import Image from '../utils/image';
+  import Carousel from '../components/carousel.svelte';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
-  import Set1 from '../images/overlap/set_1.png?webp&w=640';
-  import Set2 from '../images/overlap/set_2.png?webp&w=640';
-  import Set3 from '../images/overlap/set_3.png?webp&w=640';
-  import Overlay1 from '../images/overlap/overlay_1.png?webp&w=1920';
-  import Overlay2 from '../images/overlap/overlay_2.png?webp&w=1920';
-  import Overlay3 from '../images/overlap/overlay_3.png?webp&w=1920';
+  import Set1 from '../images/overlap/set-1.png?webp&w=640';
+  import Set2 from '../images/overlap/set-2.png?webp&w=640';
+  import Set3 from '../images/overlap/set-3.png?webp&w=640';
+  import Overlay1 from '../images/overlap/overlay-1.png?webp&w=1920';
+  import Overlay2 from '../images/overlap/overlay-2.png?webp&w=1920';
+  import Overlay3 from '../images/overlap/overlay-3.png?webp&w=1920';
   import TimerImage from '../images/overlap/timer.png?webp&w=960';
-  import TimerUseImage from '../images/overlap/timer_use.png?webp&w=1280';
-  import FileSorterImage from '../images/overlap/file_sorter.png?webp&w=960';
-  import FileSorterUseImage1 from '../images/overlap/file_sorter_use_1.png?webp&w=1280';
-  import FileSorterUseImage2 from '../images/overlap/file_sorter_use_2.png?webp&w=1280';
+  import TimerUseImage from '../images/overlap/timer-use.png?webp&w=1280';
+  import FileSorterImage from '../images/overlap/file-sorter.png?webp&w=960';
+  import FileSorterUseImage1 from '../images/overlap/file-sorter-use-1.png?webp&w=1280';
+  import FileSorterUseImage2 from '../images/overlap/file-sorter-use-2.png?webp&w=1280';
   import TrayImage from '../images/overlap/tray.png?webp&w=960';
-  import TrayUseImage1 from '../images/overlap/tray_use_1.png?webp&w=1280';
-  import TrayUseImage2 from '../images/overlap/tray_use_2.png?webp&w=1280';
-  import WoodCut from '../images/overlap/wood_cut.png?webp&w=640';
-  import WoodFlatten from '../images/overlap/wood_flatten.png?webp&w=640';
+  import TrayUseImage1 from '../images/overlap/tray-use-1.png?webp&w=1280';
+  import TrayUseImage2 from '../images/overlap/tray-use-2.png?webp&w=1280';
+  import WoodCut from '../images/overlap/wood-cut.png?webp&w=640';
+  import WoodFlatten from '../images/overlap/wood-flatten.png?webp&w=640';
   import CNC from '../images/overlap/cnc.png?webp&w=640';
-  import LaserCut from '../images/overlap/laser_cut.png?webp&w=640';
-  import BandSawCut from '../images/overlap/band_saw_cut.png?webp&w=640';
-  import MachineSanding from '../images/overlap/machine_sanding.png?webp&w=640';
-  import HandSanding from '../images/overlap/hand_sanding.png?webp&w=640';
-  import RouterChamfer from '../images/overlap/router_chamfer.png?webp&w=640';
-  import WoodStain from '../images/overlap/wood_stain.png?webp&w=640';
-  import AcrylicGluing from '../images/overlap/acrylic_gluing.png?webp&w=640';
-  import ClearMatteFinishSpray from '../images/overlap/clear_matte_finish_spray.png?webp&w=640';
+  import LaserCut from '../images/overlap/laser-cut.png?webp&w=640';
+  import BandSawCut from '../images/overlap/band-saw-cut.png?webp&w=640';
+  import MachineSanding from '../images/overlap/machine-sanding.png?webp&w=640';
+  import HandSanding from '../images/overlap/hand-sanding.png?webp&w=640';
+  import RouterChamfer from '../images/overlap/router-chamfer.png?webp&w=640';
+  import WoodStain from '../images/overlap/wood-stain.png?webp&w=640';
+  import AcrylicGluing from '../images/overlap/acrylic-gluing.png?webp&w=640';
+  import ClearMatteFinishSpray from '../images/overlap/clear-matte-finish-spray.png?webp&w=640';
   import Assembly from '../images/overlap/assembly.png?webp&w=640';
-  import Gallery1 from '../images/overlap/gallery_1.png?webp&w=1920';
-  import Gallery2 from '../images/overlap/gallery_2.png?webp&w=640';
-  import Gallery3 from '../images/overlap/gallery_3.png?webp&w=640';
-  import Gallery4 from '../images/overlap/gallery_4.png?webp&w=640';
-  import Gallery5 from '../images/overlap/gallery_5.png?webp&w=1920';
-  import Gallery6 from '../images/overlap/gallery_6.png?webp&w=1920';
+  import Gallery1 from '../images/overlap/gallery/gallery-1.png?webp&w=1920';
+  import Gallery2 from '../images/overlap/gallery/gallery-2.png?webp&w=640';
+  import Gallery3 from '../images/overlap/gallery/gallery-3.png?webp&w=640';
+  import Gallery4 from '../images/overlap/gallery/gallery-4.png?webp&w=640';
+  import Gallery5 from '../images/overlap/gallery/gallery-5.png?webp&w=1920';
+  import Gallery6 from '../images/overlap/gallery/gallery-6.png?webp&w=1920';
+  import TechDrawing1 from '../images/overlap/tech-drawing/tech-drawing-01.png?webp&w=1920';
+  import TechDrawing2 from '../images/overlap/tech-drawing/tech-drawing-02.png?webp&w=1920';
+  import TechDrawing3 from '../images/overlap/tech-drawing/tech-drawing-03.png?webp&w=1920';
+  import TechDrawing4 from '../images/overlap/tech-drawing/tech-drawing-04.png?webp&w=1920';
+  import TechDrawing5 from '../images/overlap/tech-drawing/tech-drawing-05.png?webp&w=1920';
+  import TechDrawing6 from '../images/overlap/tech-drawing/tech-drawing-06.png?webp&w=1920';
+  import TechDrawing7 from '../images/overlap/tech-drawing/tech-drawing-07.png?webp&w=1920';
+  import TechDrawing8 from '../images/overlap/tech-drawing/tech-drawing-08.png?webp&w=1920';
+  import TechDrawing9 from '../images/overlap/tech-drawing/tech-drawing-09.png?webp&w=1920';
+  import TechDrawing10 from '../images/overlap/tech-drawing/tech-drawing-10.png?webp&w=1920';
+  import TechDrawing11 from '../images/overlap/tech-drawing/tech-drawing-11.png?webp&w=1920';
 
   var pageWidth;
 </script>
@@ -146,21 +158,22 @@
 
       <!-- Tech Drawing -->
       <Title title="Tech Drawing" />
-      <div
-        class="relative single-width mb-spacing-lg"
-        style="box-sizing: content-box; padding-top: 49.5%;"
-      >
-        <div class="absolute w-full h-full top-0">
-          <iframe
-            title="Tech Drawing Book"
-            allowfullscreen={true}
-            scrolling="no"
-            class="fp-iframe"
-            style="border: 1px solid lightgray; width: 100%; height: 100%;"
-            src="https://heyzine.com/flip-book/cfeec7d272.html"
-          />
-        </div>
-      </div>
+      <Carousel
+        images={[
+          TechDrawing1,
+          TechDrawing2,
+          TechDrawing3,
+          TechDrawing4,
+          TechDrawing5,
+          TechDrawing6,
+          TechDrawing7,
+          TechDrawing8,
+          TechDrawing9,
+          TechDrawing10,
+          TechDrawing11
+        ]}
+        description="Tech Drawing"
+      />
 
       <!-- Links -->
       <Spacing />
@@ -168,7 +181,7 @@
         class="button px-6 py-3"
         href="https://miro.com/app/board/uXjVOTEI2PY=/?share_link_id=859576850266">Weekly Process</a
       >
-      <div class="flex flex-row mt-spacing text-center space-x-spacing">
+      <div class="mt-spacing flex flex-row space-x-spacing text-center">
         <a class="button w-44 py-2" href="/overlap/brand_research.pdf" target="_blank"
           >Brand Research</a
         >
@@ -211,7 +224,7 @@
         ]}
       />
 
-      <a class="px-6 py-3 button" href="/lyu">Next Project</a>
+      <a class="button px-6 py-3" href="/lyu">Next Project</a>
       <Spacing />
     </div>
   </Scroller>

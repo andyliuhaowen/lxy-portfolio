@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="grid grid-cols-3 gap-y-spacing gap-x-8 mx-spacing-lg font-extralight mb-spacing-3lg single-width"
+  class="single mx-spacing-lg mb-spacing-3lg grid grid-cols-3 gap-y-spacing gap-x-8 font-extralight"
 >
   {#each items as item}
     <div class="flex flex-col items-center">

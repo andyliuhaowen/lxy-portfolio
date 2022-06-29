@@ -9,10 +9,10 @@
 </script>
 
 <div
-  class="relative h-screen min-h-132 xl:min-h-152 shadow-lg flex-shrink-0 bg-white"
+  class="relative h-screen min-h-132 flex-shrink-0 bg-white shadow-lg xl:min-h-152"
   style={`width: ${$progress * (pageWidth < 1280 ? 16 : 21)}rem`}
 >
-  <div class="absolute top-0 right-18 xl:right-24 w-36 h-full flex flex-col justify-between py-24">
+  <div class="absolute top-0 right-18 flex h-full w-36 flex-col justify-between py-24 xl:right-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
     <div class="flex flex-col space-y-1">
       <a href="/about" class="primary">About</a>
@@ -40,9 +40,9 @@
       </a>
     </div>
   </div>
-  <div class="absolute w-20 h-24 top-20 -right-20 overflow-hidden z-10">
+  <div class="absolute top-20 -right-20 z-10 h-24 w-20 overflow-hidden">
     <div
-      class="absolute rounded-full bg-white w-20 h-20 top-0 -left-10 shadow-lg flex items-center cursor-pointer"
+      class="absolute top-0 -left-10 flex h-20 w-20 cursor-pointer items-center rounded-full bg-white shadow-lg"
       on:click={() => {
         if (open) {
           $progress = 0;
@@ -53,7 +53,7 @@
       }}
     >
       <i
-        class="relative fa-solid fa-angle-left fa-xl left-12"
+        class="fa-solid fa-angle-left fa-xl relative left-12"
         style={`transform: rotateY(${(1 - $progress) * 180}deg)`}
       />
     </div>

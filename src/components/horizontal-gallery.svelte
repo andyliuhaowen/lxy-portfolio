@@ -4,12 +4,12 @@
   export let items: GalleryItem[];
 </script>
 
-<div class="flex flex-row mx-spacing-lg justify-around single-width mb-spacing-3lg">
+<div class="single mx-spacing-lg mb-spacing-3lg flex flex-row justify-around">
   {#each items as item}
-    <div class="flex flex-col items-center one-in-three-sparse">
+    <div class="one-in-three-sparse flex flex-col items-center">
       <img src={item.image} alt={item.title} loading="lazy" />
-      <div class="font-semibold text-base xl:text-lg mt-4 xl:mt-8 text-center">{item.title}</div>
-      <div class="font-extralight text-sm xl:text-base text-center">{item.description}</div>
+      <div class="mt-4 text-center text-base font-semibold xl:mt-8 xl:text-lg">{item.title}</div>
+      <div class="text-center text-sm font-extralight xl:text-base">{item.description}</div>
     </div>
   {/each}
 </div>
