@@ -77,16 +77,14 @@
   import Benchmark from '../images/overlap/benchmark.png?webp&w=1920';
   import Ideation from '../images/overlap/ideation.png?webp&w=1920';
   import Prototype from '../images/overlap/prototype.png?webp&w=1920';
-
-  var pageWidth;
 </script>
 
 <svelte:head>
   <title>Shirley Lyu Portfolio</title>
 </svelte:head>
 
-<div class="flex flex-row" bind:clientWidth={pageWidth}>
-  <Sidebar {pageWidth} />
+<div class="flex flex-row">
+  <Sidebar />
   <Scroller>
     <TopDisplay
       image={TopImage}
@@ -204,13 +202,13 @@
       />
 
       <Subtitle subtitle="HAY's Brand Benchmarks" />
-      <img src={Benchmark} alt="Brand benchmark" class="single mb-spacing-3lg" />
+      <img src={Benchmark} alt="Brand benchmark" class="single mb-spacing-3lg" loading="lazy" />
 
       <Subtitle subtitle="Overlap Ideation" />
-      <img src={Ideation} alt="Ideation" class="w-full mb-spacing-3lg" />
+      <img src={Ideation} alt="Ideation" class="mb-spacing-3lg w-full" loading="lazy" />
 
       <Subtitle subtitle="Prototype & Form Perfection" />
-      <img src={Prototype} alt="Prototype" class="w-full mb-spacing-3lg" />
+      <img src={Prototype} alt="Prototype" class="mb-spacing-3lg w-full" loading="lazy" />
 
       <!-- CMF & Manufacturing -->
       <Title title="CMF & Manufacturing" />

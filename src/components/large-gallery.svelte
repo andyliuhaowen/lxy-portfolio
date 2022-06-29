@@ -11,7 +11,7 @@
     <div class="flex flex-row space-x-8">
       {#each row as image}
         {#if row.length === 1}
-          <img src={image.src} alt="Gallery item" />
+          <img src={image.src} alt="Gallery item" loading="lazy" />
         {:else}
           <img
             src={image.src}
@@ -20,6 +20,7 @@
             style={`height: calc((${width}px - ${(row.length - 1) * 2}rem)/${row
               .map((curr) => curr.width / curr.height)
               .reduce((prev, curr) => prev + curr)}`}
+            loading="lazy"
           />
         {/if}
       {/each}

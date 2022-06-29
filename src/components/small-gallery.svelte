@@ -7,7 +7,7 @@
 <div class="single paragraph mx-spacing-lg mb-spacing-3lg grid grid-cols-3 gap-y-spacing gap-x-8">
   {#each items as item}
     <div class="flex flex-col items-center">
-      <img src={item.image} alt={item.title} />
+      <img src={item.image} alt={item.title} loading="lazy" />
       <div class="mt-2">{item.title}</div>
     </div>
   {/each}

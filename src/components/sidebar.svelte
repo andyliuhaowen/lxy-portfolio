@@ -1,16 +1,14 @@
 <script lang="ts">
   import Logo from '../images/logo.svg';
-  import { spring } from 'svelte/motion';
 
-  export let pageWidth: number;
-
-  var progress = spring(1, { stiffness: 0.1, damping: 0.6, precision: 0.005 });
   var open = true;
 </script>
 
 <div
-  class="relative h-screen min-h-132 flex-shrink-0 bg-white shadow-lg xl:min-h-152"
-  style={`width: ${$progress * (pageWidth < 1280 ? 16 : 21)}rem`}
+  class="relative h-screen min-h-132 flex-shrink-0 bg-white shadow-lg transition-[width] duration-200 ease-in-out xl:min-h-152"
+  class:w-64={open}
+  class:xl:w-84={open}
+  class:w-0={!open}
 >
   <div class="absolute top-0 right-18 flex h-full w-36 flex-col justify-between py-24 xl:right-24">
     <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
@@ -44,18 +42,19 @@
     <div
       class="absolute top-0 -left-10 flex h-20 w-20 cursor-pointer items-center rounded-full bg-white shadow-lg"
       on:click={() => {
-        if (open) {
-          $progress = 0;
-        } else {
-          $progress = 1;
-        }
         open = !open;
       }}
     >
       <i
-        class="fa-solid fa-angle-left fa-xl relative left-12"
-        style={`transform: rotateY(${(1 - $progress) * 180}deg)`}
+        class="fa-solid fa-angle-left fa-xl relative left-12 transition-transform duration-200 ease-in-out"
+        class:rotate={!open}
       />
     </div>
   </div>
 </div>
+
+<style lang="postcss">
+  .rotate {
+    transform: rotateY(180deg);
+  }
+</style>

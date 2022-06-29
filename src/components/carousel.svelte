@@ -19,7 +19,12 @@
       style={`transform: translateX(-${currentIndex}00%`}
     >
       {#each images as image, index}
-        <img src={image} alt={`${description} ${index}`} class="w-full flex-shrink-0" />
+        <img
+          src={image}
+          alt={`${description} ${index}`}
+          class="w-full flex-shrink-0"
+          loading="lazy"
+        />
       {/each}
     </div>
   </div>
