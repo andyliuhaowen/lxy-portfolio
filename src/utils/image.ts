@@ -1,4 +1,4 @@
-class Image {
+export class Image {
   src: string;
   width: number;
   height: number;
@@ -9,5 +9,3 @@ class Image {
     this.height = height;
   }
 }
-
-export default Image;

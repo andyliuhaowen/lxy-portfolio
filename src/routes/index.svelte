@@ -12,12 +12,13 @@
   import Title from '../components/title.svelte';
   import SmallGallery from '../components/small-gallery.svelte';
   import LargeGallery from '../components/large-gallery.svelte';
-  import Image from '../utils/image';
+  import { Image } from '../utils/image';
   import Carousel from '../components/carousel.svelte';
   import Subtitle from '../components/subtitle.svelte';
   import FullImage from '../components/full-image.svelte';
   import CenterImage from '../components/center-image.svelte';
   import ProjectNavigation from '../components/project-navigation.svelte';
+  import { GalleryRow } from '../utils/gallery-row';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
@@ -83,12 +84,12 @@
 </script>
 
 <svelte:head>
-  <title>Shirley Lyu Portfolio</title>
+  <title>Overlap | Shirley Lyu Portfolio</title>
 </svelte:head>
 
 <PageRoot>
   <Sidebar />
-  <Scroller>
+  <Scroller bgColor="bg-[#FDF9F1]">
     <TopDisplay
       image={TopImage}
       description={new ProjectDescription(
@@ -99,6 +100,7 @@
         'Designing and making a line of accessories for Hay. The design will include a range of small and functional objects, which fits the brand identity and considers the company’s manufacturing techniques, as well their use of materials.',
         'This is not a product of Hay. Branding and logo marks are used for demonstration purposes only.'
       )}
+      titleColor="text-gray-900"
     />
     <TextImage
       title="Project Manifesto"
@@ -229,16 +231,17 @@
 
     <Title title="Product Gallery" />
     <LargeGallery
-      items={[
-        [new Image(Gallery1, 12767, 7167)],
-        [
+      rows={[
+        new GalleryRow([new Image(Gallery1, 12767, 7167)]),
+        new GalleryRow([
           new Image(Gallery2, 4684, 3750),
           new Image(Gallery3, 4684, 3750),
           new Image(Gallery4, 3067, 3750)
-        ],
-        [new Image(Gallery5, 12767, 7167)],
-        [new Image(Gallery6, 12767, 7125)]
+        ]),
+        new GalleryRow([new Image(Gallery5, 12767, 7167)]),
+        new GalleryRow([new Image(Gallery6, 12767, 7125)])
       ]}
+      description="Overlap"
     />
 
     <ProjectNavigation next="/lyu" />

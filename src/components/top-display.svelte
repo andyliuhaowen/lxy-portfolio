@@ -1,16 +1,14 @@
 <script lang="ts">
   import type ProjectDescription from '../utils/project-description';
 
-  export let image: string, description: ProjectDescription;
+  export let image: string, description: ProjectDescription, titleColor: string;
 </script>
 
 <div class="mb-spacing-3lg flex h-screen min-h-132 flex-col xl:min-h-152">
-  <img
-    src={image}
-    alt={description.name}
-    class="min-h-0 flex-shrink flex-grow object-cover"
-    loading="lazy"
-  />
+  <div class="relative min-h-0 w-full flex-shrink flex-grow">
+    <img src={image} alt={description.name} class="h-full w-full object-cover" loading="lazy" />
+    <div class={`absolute left-spacing-lg top-24 text-3xl ${titleColor}`}>{description.name}</div>
+  </div>
   <div class="flex flex-col items-center">
     <div class="single mx-spacing-lg flex flex-row space-x-spacing py-8">
       <div class="half space-y-2">

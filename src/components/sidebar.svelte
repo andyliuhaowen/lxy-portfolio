@@ -11,7 +11,9 @@
   class:w-0={!open}
 >
   <div class="absolute top-0 right-18 flex h-full w-36 flex-col justify-between py-24 xl:right-24">
-    <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
+    <a href="/">
+      <img src={Logo} alt="Shirley Lyu Logo" class="w-full" loading="lazy" />
+    </a>
     <div class="flex flex-col space-y-1">
       <a href="/about" class="subtitle">About</a>
       <a href="/portfolio" class="subtitle">Portfolio</a>

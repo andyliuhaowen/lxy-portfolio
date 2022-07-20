@@ -11,7 +11,13 @@
   import ProjectNavigation from '../components/project-navigation.svelte';
   import SmallGallery from '../components/small-gallery.svelte';
   import Carousel from '../components/carousel.svelte';
+  import LargeGallery from '../components/large-gallery.svelte';
+  import { GalleryRow, GalleryRowConfig } from '../utils/gallery-row';
+  import { Animation } from '../utils/animation';
+  import TopDisplay from '../components/top-display.svelte';
+  import ProjectDescription from '../utils/project-description';
 
+  import DisplayImage from '../images/lyu/display.png?webp&w=1920';
   import ManifestoImage from '../images/lyu/manifesto.png?webp&w=960';
   import Stylish1 from '../images/lyu/stylish-1.png?webp&w=640';
   import Stylish2 from '../images/lyu/stylish-2.png?webp&w=640';
@@ -52,6 +58,29 @@
   import TechPack5 from '../images/lyu/tech-pack-5.png?webp&w=1920';
   import TechPack6 from '../images/lyu/tech-pack-6.png?webp&w=1920';
   import TechPack7 from '../images/lyu/tech-pack-7.png?webp&w=1920';
+  import Gallery11 from '../images/lyu/gallery/gallery-1-1.png?webp&w=960';
+  import Gallery12 from '../images/lyu/gallery/gallery-1-2.png?webp&w=960';
+  import Gallery13 from '../images/lyu/gallery/gallery-1-3.png?webp&w=960';
+  import Gallery21 from '../images/lyu/gallery/gallery-2-1.png?webp&w=960';
+  import Gallery22 from '../images/lyu/gallery/gallery-2-2.png?webp&w=960';
+  import Gallery23 from '../images/lyu/gallery/gallery-2-3.png?webp&w=960';
+  import Gallery31 from '../images/lyu/gallery/gallery-3-1.png?webp&w=1280';
+  import Gallery32 from '../images/lyu/gallery/gallery-3-2.png?webp&w=1280';
+  import Gallery41 from '../images/lyu/gallery/gallery-4-1.png?webp&w=640';
+  import Gallery42 from '../images/lyu/gallery/gallery-4-2.png?webp&w=640';
+  import Gallery43 from '../images/lyu/gallery/gallery-4-3.png?webp&w=640';
+  import Gallery51 from '../images/lyu/gallery/gallery-5-1.png?webp&w=640';
+  import Gallery52 from '../images/lyu/gallery/gallery-5-2.png?webp&w=640';
+  import Gallery53 from '../images/lyu/gallery/gallery-5-3.png?webp&w=640';
+  import Gallery61 from '../images/lyu/gallery/gallery-6-1.png?webp&w=1280';
+  import Gallery62 from '../images/lyu/gallery/gallery-6-2.png?webp&w=1280';
+  import Gallery63 from '../images/lyu/gallery/gallery-6-3.png?webp&w=1280';
+  import Gallery71 from '../images/lyu/gallery/gallery-7-1.png?webp&w=960';
+  import Gallery72 from '../images/lyu/gallery/gallery-7-2.png?webp&w=960';
+  import Gallery73 from '../images/lyu/gallery/gallery-7-3.png?webp&w=960';
+  import Gallery81 from '../images/lyu/gallery/gallery-8-1.png?webp&w=960';
+  import Gallery82 from '../images/lyu/gallery/gallery-8-2.png?webp&w=960';
+  import Gallery83 from '../images/lyu/gallery/gallery-8-3.png?webp&w=960';
 </script>
 
 <svelte:head>
@@ -60,7 +89,20 @@
 
 <PageRoot>
   <Sidebar />
-  <Scroller>
+  <Scroller bgColor="bg-[#EFF2F3]">
+    <TopDisplay
+      image={DisplayImage}
+      description={new ProjectDescription(
+        'Lyu',
+        '2 Weeks Daily',
+        'Soft Goods',
+        'Craft, Techdrawing, Manufacture',
+        '2-week daily course provided practical knowledge of leather footwear and leather bag making in a factory setting.'
+      )}
+      titleColor="text-gray-100"
+    />
+
+    <!-- Manifesto -->
     <TextImage
       title="Project Manifesto"
       content={[
@@ -130,6 +172,36 @@
     <Carousel
       images={[TechPack1, TechPack2, TechPack3, TechPack4, TechPack5, TechPack6, TechPack7]}
       description="Tech Pack"
+    />
+
+    <!-- Gallery -->
+    <Title title="Project Gallery" />
+    <LargeGallery
+      rows={[
+        new GalleryRow(
+          [
+            new Animation([Gallery11, Gallery12, Gallery13], 4694, 7017),
+            new Animation([Gallery21, Gallery22, Gallery23], 4684, 5625)
+          ],
+          GalleryRowConfig.EqualWidthEnd
+        ),
+        new GalleryRow([
+          new Animation([Gallery31, Gallery32], 6467, 4159),
+          new Animation([Gallery41, Gallery42, Gallery43], 2900, 4159)
+        ]),
+        new GalleryRow([
+          new Animation([Gallery51, Gallery52, Gallery53], 2900, 4159),
+          new Animation([Gallery61, Gallery62, Gallery63], 6467, 4159)
+        ]),
+        new GalleryRow(
+          [
+            new Animation([Gallery71, Gallery72, Gallery73], 4694, 7017),
+            new Animation([Gallery81, Gallery82, Gallery83], 4684, 5625)
+          ],
+          GalleryRowConfig.EqualWidthStart
+        )
+      ]}
+      description="Lyu"
     />
 
     <ProjectNavigation prev="/overlay" next="/soul" />
