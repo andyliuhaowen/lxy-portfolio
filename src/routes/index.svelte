@@ -1,4 +1,5 @@
 <script lang="ts">
+  import PageRoot from '../components/page-root.svelte';
   import Sidebar from '../components/sidebar.svelte';
   import Scroller from '../components/scroller.svelte';
   import TopDisplay from '../components/top-display.svelte';
@@ -9,12 +10,14 @@
   import HorizontalGallery from '../components/horizontal-gallery.svelte';
   import OverlayImage from '../components/overlay-image.svelte';
   import Title from '../components/title.svelte';
-  import Spacing from '../components/spacing.svelte';
   import SmallGallery from '../components/small-gallery.svelte';
   import LargeGallery from '../components/large-gallery.svelte';
   import Image from '../utils/image';
   import Carousel from '../components/carousel.svelte';
   import Subtitle from '../components/subtitle.svelte';
+  import FullImage from '../components/full-image.svelte';
+  import CenterImage from '../components/center-image.svelte';
+  import ProjectNavigation from '../components/project-navigation.svelte';
 
   import TopImage from '../images/overlap/top.jpg?webp&w=1920';
   import ManifestoImage from '../images/overlap/manifesto.jpg?webp&w=960';
@@ -83,7 +86,7 @@
   <title>Shirley Lyu Portfolio</title>
 </svelte:head>
 
-<div class="flex flex-row">
+<PageRoot>
   <Sidebar />
   <Scroller>
     <TopDisplay
@@ -97,158 +100,147 @@
         'This is not a product of Hay. Branding and logo marks are used for demonstration purposes only.'
       )}
     />
-    <div class="flex flex-col items-center">
-      <TextImage
-        title="Project Manifesto"
-        content={[
-          'A collection of office accessories that can provide users with an intuitive concept of category. To help users better organize their time, space, and objects.'
-        ]}
-        image={ManifestoImage}
-      />
+    <TextImage
+      title="Project Manifesto"
+      content={[
+        'A collection of office accessories that can provide users with an intuitive concept of category. To help users better organize their time, space, and objects.'
+      ]}
+      image={ManifestoImage}
+    />
 
-      <Title title="Overlap Set" />
-      <HorizontalGallery
-        items={[
-          new GalleryItem(Set1, 'Timer', 'Section Time'),
-          new GalleryItem(Set2, 'File Sorter', 'Categorize files, books, etc.'),
-          new GalleryItem(Set3, 'Tray', 'Store pens, pins, etc.')
-        ]}
-        sparse={true}
-      />
-      <Title title="Moodboard: Time, Space, Organizing" />
-      <OverlayImage
-        title="Overlapped"
-        content="Time and space sometimes overlap."
-        image={Overlay1}
-      />
-      <OverlayImage
-        title="Changeable"
-        content="Time changes are unnoticeable, so objects’ movements and Changes are used to define time pass and environment change."
-        image={Overlay2}
-      />
-      <OverlayImage title="Joyful" content="Categorizing can be a joyful thing!" image={Overlay3} />
+    <Title title="Overlap Set" />
+    <HorizontalGallery
+      items={[
+        new GalleryItem(Set1, 'Timer', 'Section Time'),
+        new GalleryItem(Set2, 'File Sorter', 'Categorize files, books, etc.'),
+        new GalleryItem(Set3, 'Tray', 'Store pens, pins, etc.')
+      ]}
+      sparse={true}
+    />
+    <Title title="Moodboard: Time, Space, Organizing" />
+    <OverlayImage title="Overlapped" content="Time and space sometimes overlap." image={Overlay1} />
+    <OverlayImage
+      title="Changeable"
+      content="Time changes are unnoticeable, so objects’ movements and Changes are used to define time pass and environment change."
+      image={Overlay2}
+    />
+    <OverlayImage title="Joyful" content="Categorizing can be a joyful thing!" image={Overlay3} />
 
-      <!-- Timer -->
-      <TextImage
-        title="Timer"
-        content={['Overlapped part = Set up time', '1 Slice = 10 mins', 'Total: 1 hour']}
-        image={TimerImage}
-      />
-      <ImageText
-        title="Timer usage"
-        content={['Set a Time', 'Set-time Passing']}
-        image={TimerUseImage}
-      />
+    <!-- Timer -->
+    <TextImage
+      title="Timer"
+      content={['Overlapped part = Set up time', '1 Slice = 10 mins', 'Total: 1 hour']}
+      image={TimerImage}
+    />
+    <ImageText
+      title="Timer usage"
+      content={['Set a Time', 'Set-time Passing']}
+      image={TimerUseImage}
+    />
 
-      <!-- File Sorter -->
-      <TextImage
-        title="File Sorter"
-        content={[
-          '4 Different translucent colored blockers categorize files with height and colors.'
-        ]}
-        image={FileSorterImage}
-      />
-      <ImageText
-        title="File sorter usage 1"
-        content={['Put in file']}
-        image={FileSorterUseImage1}
-      />
-      <ImageText
-        title="File sorter usage 2"
-        content={['Different Overlapping Order']}
-        image={FileSorterUseImage2}
-      />
+    <!-- File Sorter -->
+    <TextImage
+      title="File Sorter"
+      content={[
+        '4 Different translucent colored blockers categorize files with height and colors.'
+      ]}
+      image={FileSorterImage}
+    />
+    <ImageText title="File sorter usage 1" content={['Put in file']} image={FileSorterUseImage1} />
+    <ImageText
+      title="File sorter usage 2"
+      content={['Different Overlapping Order']}
+      image={FileSorterUseImage2}
+    />
 
-      <!-- Tray -->
-      <TextImage
-        title="Tray"
-        content={['4 Different color, size, and depth trays to categorize office accessories.']}
-        image={TrayImage}
-      />
-      <ImageText title="Tray usage 1" content={['Different combinations']} image={TrayUseImage1} />
-      <ImageText title="Tray usage 2" content={['Different usage']} image={TrayUseImage2} />
+    <!-- Tray -->
+    <TextImage
+      title="Tray"
+      content={['4 Different color, size, and depth trays to categorize office accessories.']}
+      image={TrayImage}
+    />
+    <ImageText title="Tray usage 1" content={['Different combinations']} image={TrayUseImage1} />
+    <ImageText title="Tray usage 2" content={['Different usage']} image={TrayUseImage2} />
 
-      <!-- Tech Drawing -->
-      <Title title="Tech Drawing" />
-      <Carousel
-        images={[
-          TechDrawing1,
-          TechDrawing2,
-          TechDrawing3,
-          TechDrawing4,
-          TechDrawing5,
-          TechDrawing6,
-          TechDrawing7,
-          TechDrawing8,
-          TechDrawing9,
-          TechDrawing10,
-          TechDrawing11
-        ]}
-        description="Tech Drawing"
-      />
+    <!-- Tech Drawing -->
+    <Title title="Tech Drawing" />
+    <Carousel
+      images={[
+        TechDrawing1,
+        TechDrawing2,
+        TechDrawing3,
+        TechDrawing4,
+        TechDrawing5,
+        TechDrawing6,
+        TechDrawing7,
+        TechDrawing8,
+        TechDrawing9,
+        TechDrawing10,
+        TechDrawing11
+      ]}
+      description="Tech Drawing"
+    />
 
-      <!-- Design Process -->
-      <Title title="Design Process" />
-      <Subtitle subtitle="HAY's Brand DNA Analysis" />
-      <HorizontalGallery
-        items={[
-          new GalleryItem(Playful, undefined, 'Playful'),
-          new GalleryItem(Accessible, undefined, 'Accessible'),
-          new GalleryItem(Adaptive, undefined, 'Adaptive'),
-          new GalleryItem(Contemporary, undefined, 'Contemporary'),
-          new GalleryItem(Vibrant, undefined, 'Vibrant')
-        ]}
-        sparse={false}
-      />
+    <!-- Design Process -->
+    <Title title="Design Process" />
+    <Subtitle subtitle="HAY's Brand DNA Analysis" />
+    <HorizontalGallery
+      items={[
+        new GalleryItem(Playful, undefined, 'Playful'),
+        new GalleryItem(Accessible, undefined, 'Accessible'),
+        new GalleryItem(Adaptive, undefined, 'Adaptive'),
+        new GalleryItem(Contemporary, undefined, 'Contemporary'),
+        new GalleryItem(Vibrant, undefined, 'Vibrant')
+      ]}
+      sparse={false}
+    />
 
-      <Subtitle subtitle="HAY's Brand Benchmarks" />
-      <img src={Benchmark} alt="Brand benchmark" class="single mb-spacing-3lg" loading="lazy" />
+    <Subtitle subtitle="HAY's Brand Benchmarks" />
+    <CenterImage src={Benchmark} alt="Brand benchmark" />
 
-      <Subtitle subtitle="Overlap Ideation" />
-      <img src={Ideation} alt="Ideation" class="mb-spacing-3lg w-full" loading="lazy" />
+    <Subtitle subtitle="Overlap Ideation" />
+    <FullImage src={Ideation} alt="Ideation for Overlap" />
 
-      <Subtitle subtitle="Prototype & Form Perfection" />
-      <img src={Prototype} alt="Prototype" class="mb-spacing-3lg w-full" loading="lazy" />
+    <Subtitle subtitle="Prototype & Form Perfection" />
+    <FullImage src={Prototype} alt="Prototype for Overlap" />
 
-      <!-- CMF & Manufacturing -->
-      <Title title="CMF & Manufacturing" />
-      <Carousel images={[CMF1, CMF2, CMF3, CMF4, CMF5, CMF6, CMF7, CMF8]} description="CMF" />
+    <!-- CMF & Manufacturing -->
+    <Title title="CMF & Manufacturing" />
+    <Carousel images={[CMF1, CMF2, CMF3, CMF4, CMF5, CMF6, CMF7, CMF8]} description="CMF" />
 
-      <!-- Making process -->
-      <Title title="Final Model Making Process" />
-      <SmallGallery
-        items={[
-          new GalleryItem(WoodCut, 'Wood Cut'),
-          new GalleryItem(WoodFlatten, 'Wood Flatten'),
-          new GalleryItem(CNC, 'CNC'),
-          new GalleryItem(LaserCut, 'Laser Cut'),
-          new GalleryItem(BandSawCut, 'Band Saw Cut'),
-          new GalleryItem(MachineSanding, 'Machine Sanding'),
-          new GalleryItem(HandSanding, 'Hand Sanding'),
-          new GalleryItem(RouterChamfer, 'Router Chamfer'),
-          new GalleryItem(WoodStain, 'Wood Stain'),
-          new GalleryItem(AcrylicGluing, 'Acrylic Gluing'),
-          new GalleryItem(ClearMatteFinishSpray, 'Clear Matte Finish Spray'),
-          new GalleryItem(Assembly, 'Assembly')
-        ]}
-      />
+    <!-- Making process -->
+    <Title title="Final Model Making Process" />
+    <SmallGallery
+      items={[
+        new GalleryItem(WoodCut, 'Wood Cut'),
+        new GalleryItem(WoodFlatten, 'Wood Flatten'),
+        new GalleryItem(CNC, 'CNC'),
+        new GalleryItem(LaserCut, 'Laser Cut'),
+        new GalleryItem(BandSawCut, 'Band Saw Cut'),
+        new GalleryItem(MachineSanding, 'Machine Sanding'),
+        new GalleryItem(HandSanding, 'Hand Sanding'),
+        new GalleryItem(RouterChamfer, 'Router Chamfer'),
+        new GalleryItem(WoodStain, 'Wood Stain'),
+        new GalleryItem(AcrylicGluing, 'Acrylic Gluing'),
+        new GalleryItem(ClearMatteFinishSpray, 'Clear Matte Finish Spray'),
+        new GalleryItem(Assembly, 'Assembly')
+      ]}
+    />
 
-      <Title title="Product Gallery" />
-      <LargeGallery
-        items={[
-          [new Image(Gallery1, 12767, 7167)],
-          [
-            new Image(Gallery2, 4684, 3750),
-            new Image(Gallery3, 4684, 3750),
-            new Image(Gallery4, 3067, 3750)
-          ],
-          [new Image(Gallery5, 12767, 7167)],
-          [new Image(Gallery6, 12767, 7125)]
-        ]}
-      />
+    <Title title="Product Gallery" />
+    <LargeGallery
+      items={[
+        [new Image(Gallery1, 12767, 7167)],
+        [
+          new Image(Gallery2, 4684, 3750),
+          new Image(Gallery3, 4684, 3750),
+          new Image(Gallery4, 3067, 3750)
+        ],
+        [new Image(Gallery5, 12767, 7167)],
+        [new Image(Gallery6, 12767, 7125)]
+      ]}
+    />
 
-      <a class="button px-6 py-3" href="/lyu">Next Project</a>
-      <Spacing />
-    </div>
+    <ProjectNavigation next="/lyu" />
   </Scroller>
-</div>
+</PageRoot>

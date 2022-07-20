@@ -1,11 +1,15 @@
 <script lang="ts">
   import type GalleryItem from 'src/utils/gallery-item';
 
-  export let items: GalleryItem[], sparse: boolean;
+  export let items: GalleryItem[],
+    sparse = false,
+    botSpacing = true;
 </script>
 
 <div
-  class="single mx-spacing-lg mb-spacing-3lg flex flex-row"
+  class="single mx-spacing-lg flex flex-row"
+  class:mb-spacing-3lg={botSpacing}
+  class:mb-spacing={!botSpacing}
   class:space-x-spacing={!sparse}
   class:space-x-spacing-lg={sparse}
 >
