@@ -3,7 +3,7 @@
     next: string | undefined = undefined;
 </script>
 
-<div class="flex flex-row font-semibold single">
+<div class="single flex flex-row font-semibold">
   {#if prev !== undefined}
     <div class="mr-auto flex flex-row items-center space-x-4">
       <i class="fa-solid fa-angle-left" />
